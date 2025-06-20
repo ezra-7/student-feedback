@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Submit Feedback</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/script.js"></script>
+</head>
+<body>
+    <h2>Submit Feedback</h2>
+    <form method="post" onsubmit="return validateForm()">
+        Name: <input type="text" name="name"><br>
+        Course: <input type="text" name="course" required><br>
+        Instructor: <input type="text" name="instructor" required><br>
+        Rating (1-5): <input type="number" name="rating" min="1" max="5" required><br>
+        Comments:<br>
+        <textarea name="comments" required></textarea><br>
+        <input type="submit" value="Submit">
+    </form>
+    <a href="/">Back</a>
+</body>
+</html>

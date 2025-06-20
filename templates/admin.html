@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h2>All Feedbacks</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th><th>Name</th><th>Course</th><th>Instructor</th><th>Rating</th><th>Comments</th><th>Submitted At</th>
+        </tr>
+        {% for f in feedback %}
+        <tr>
+            <td>{{ f.id }}</td>
+            <td>{{ f.name }}</td>
+            <td>{{ f.course }}</td>
+            <td>{{ f.instructor }}</td>
+            <td>{{ f.rating }}</td>
+            <td>{{ f.comments }}</td>
+            <td>{{ f.submitted_at }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/logout">Logout</a>
+</body>
+</html>
